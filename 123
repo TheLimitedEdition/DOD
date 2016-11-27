@@ -1,0 +1,15 @@
+		public function get_city_name()
+	{
+		
+	
+	
+	$post = array('email'=>$_SESSION['email_id']);
+	
+		
+  
+$collection = $this->mongo_db->db->selectCollection('all_sites');
+       	$result=$collection->distinct('column_names.City',$post);
+		return  $result;	
+		
+	}
+	
